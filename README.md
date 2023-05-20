@@ -8,8 +8,7 @@ This is a very simple tool that is not close to feature complete for developing 
 
 1. Add [`chrome-simulator.js`](chrome-simulator.js) directly into your project.
 
-2. Take your top-level code and instead call it using `ChromeExtensionSimulator.run`.
-    Example
+2. Take your top-level code and instead call it using `ChromeExtensionSimulator.run`. For example,
     ```js
     // previous
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
@@ -17,7 +16,7 @@ This is a very simple tool that is not close to feature complete for developing 
         console.log(url);
     }
     ```
-    
+
     ```js
     // new
     ChromeExtensionSimulator.run(() => {
@@ -25,7 +24,7 @@ This is a very simple tool that is not close to feature complete for developing 
             const url = tabs[0].url;
             console.log(url);
         }
-    })
+    });
     ```
 
 3. Place [`index.html`](index.html) in the same directory or in an enclosing directory.
