@@ -16,10 +16,16 @@ This is a very simple tool that is not close to feature complete for developing 
         const url = tabs[0].url;
         console.log(url);
     }
-    ChromeExtensionSimulator.run
     ```
+    
     ```js
     // new
+    ChromeExtensionSimulator.run(() => {
+        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+            const url = tabs[0].url;
+            console.log(url);
+        }
+    })
     ```
 
 3. Place [`index.html`](index.html) in the same directory or in an enclosing directory.
