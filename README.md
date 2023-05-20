@@ -2,7 +2,7 @@
 
 This is a very simple tool that is not close to feature complete for developing popup Chrome extensions outside of Chrome. It provides a simple debugging environment.
 
-![example.png](The chrome extension simulator debugging environment).
+![The chrome extension simulator debugging environment](example.png)
 
 ## Usage
 
