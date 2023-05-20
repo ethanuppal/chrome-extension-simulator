@@ -1,0 +1,2 @@
+// Copyright (C) 2023 Ethan Uppal. All rights reserved.
+const ChromeExtensionSimulator={run:function(a){function chromeButNotExtension(){if('tabs'in chrome){if('query'in chrome){return false}}return true}if((typeof chrome==='undefined')||chromeButNotExtension()){var u='example.com';window.addEventListener('message',e=>{u=e.data.url||u;var chrome={tabs:{query:(o,b)=>{b([{url:url}])}}};a(chrome)},true)}else{a(chrome)}}};
