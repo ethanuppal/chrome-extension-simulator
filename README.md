@@ -1,6 +1,6 @@
 # chrome-extension-simulator
 
-This is a very debugging environment for developing popup Chrome extensions outside of Chrome, albeit not even close to feature-complete.
+Chrome extension simulator is a debugging environment web app for developing popup Chrome extensions outside of Chrome, albeit not even close to feature-complete.
 
 ![The chrome extension simulator debugging environment](example.png)
 
