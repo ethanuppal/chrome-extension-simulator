@@ -1,6 +1,6 @@
 # chrome-extension-simulator
 
-This is a very simple tool that is not close to feature complete for developing popup Chrome extensions outside of Chrome. It provides a simple debugging environment.
+This is a very debugging environment for developing popup Chrome extensions outside of Chrome, albeit not even close to feature-complete.
 
 ![The chrome extension simulator debugging environment](example.png)
 
@@ -10,7 +10,7 @@ This is a very simple tool that is not close to feature complete for developing 
 
 2. Take your top-level code and instead call it using `ChromeExtensionSimulator.run`. For example,
     ```js
-    // previous
+    // before
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
         const url = tabs[0].url;
         console.log(url);
@@ -18,7 +18,7 @@ This is a very simple tool that is not close to feature complete for developing 
     ```
 
     ```js
-    // new
+    // after
     ChromeExtensionSimulator.run(() => {
         chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
             const url = tabs[0].url;
@@ -26,6 +26,7 @@ This is a very simple tool that is not close to feature complete for developing 
         }
     });
     ```
+    This will not affect how your code runs; it merely allows the simulator to work.
 
 3. Place [`index.html`](index.html) in the same directory or in an enclosing directory.
 
